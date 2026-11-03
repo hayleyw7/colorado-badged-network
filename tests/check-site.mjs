@@ -5,6 +5,10 @@ const html = readFileSync('index.html', 'utf8');
 const css = readFileSync('styles.css', 'utf8');
 
 assert.match(html, /<html lang="en">/);
+assert.match(html, /<header class="site-header" id="top">/);
+assert.equal((html.match(/class="resource-card"/g) || []).length, 6);
+assert.match(html, /class="hero-logo" src="assets\/cbn-hero-logo\.png"/);
+assert.ok(readFileSync('assets/cbn-hero-logo.png').length > 0);
 assert.match(html, /<meta name="viewport"/);
 assert.match(html, /<link rel="icon" href="favicon\.svg"/);
 assert.match(html, /id="about"/);
