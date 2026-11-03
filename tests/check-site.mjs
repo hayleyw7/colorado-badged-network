@@ -37,15 +37,24 @@ for (const color of ['#000000', '#FFFFFF', '#959699', '#585858', '#79C646', '#48
 assert.doesNotMatch(css, /#(?:d46f3c|f5b28b|f8f1e8)/i);
 console.log(`CBN checks passed: ${hrefs.length} external links, approved palette, required content, and accessibility structure.`);
 
-const socialImage = 'https://hayleyw7.github.io/colorado-badged-network/assets/cbn-hero-logo.png';
+const socialImage = 'https://hayleyw7.github.io/colorado-badged-network/assets/cbn-social-preview.png';
 assert.ok(html.includes('<link rel="canonical" href="https://www.coloradobadgednetwork.com/"'));
 assert.ok(html.includes('<meta property="og:url" content="https://www.coloradobadgednetwork.com/"'));
 assert.ok(html.includes(`<meta property="og:image" content="${socialImage}"`));
 assert.ok(html.includes(`<meta name="twitter:image" content="${socialImage}"`));
 assert.match(html, /name="twitter:card" content="summary_large_image"/);
-const heroPng = readFileSync('assets/cbn-hero-logo.png');
-assert.equal(heroPng.readUInt32BE(16), 1280);
-assert.equal(heroPng.readUInt32BE(20), 1119);
-assert.match(html, /property="og:image:width" content="1280"/);
-assert.match(html, /property="og:image:height" content="1119"/);
+const socialPng = readFileSync('assets/cbn-social-preview.png');
+assert.equal(socialPng.readUInt32BE(16), 1200);
+assert.equal(socialPng.readUInt32BE(20), 630);
+assert.match(html, /property="og:image:width" content="1200"/);
+assert.match(html, /property="og:image:height" content="630"/);
 console.log('Social preview image and canonical metadata checks passed.');
+
+const description = 'The Colorado cannabis industry organization for networking, hiring, compliance, events, and more.';
+for (const attribute of ['name="description"', 'property="og:description"', 'name="twitter:description"']) {
+  assert.ok(html.includes(`<meta ${attribute} content="${description}"`));
+}
+for (const attribute of ['property="og:title"', 'name="twitter:title"']) {
+  assert.ok(html.includes(`<meta ${attribute} content="Colorado Badged Network"`));
+}
+console.log('Approved social titles and descriptions match.');
