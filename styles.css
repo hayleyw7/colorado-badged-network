@@ -20,3 +20,5 @@ body{background:var(--cream);color:#222}.site-header{background:#000;border-bott
 .hero-copy .button.primary,.media .button.secondary{background:#6fae38;color:#111}
 section#about,section#resources,section#media{scroll-margin-top:96px}
 @media(max-width:760px){section#about,section#resources,section#media{scroll-margin-top:78px}}
+/* Keep media cards equal-height per row and align their links. */
+.media-grid{align-items:stretch}.media-grid .feature{height:100%;display:flex;flex-direction:column}.media-grid .feature a{margin-top:auto}
