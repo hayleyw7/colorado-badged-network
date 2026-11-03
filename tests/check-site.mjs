@@ -50,7 +50,7 @@ assert.match(html, /property="og:image:width" content="1200"/);
 assert.match(html, /property="og:image:height" content="630"/);
 console.log('Social preview image and canonical metadata checks passed.');
 
-const description = 'The Colorado cannabis industry organization for networking, hiring, compliance, events, and more.';
+const description = 'Founded in 2015, Colorado Badged Network is a cannabis industry organization and the central hub for networking, hiring, compliance, events, &amp; more.';
 for (const attribute of ['name="description"', 'property="og:description"', 'name="twitter:description"']) {
   assert.ok(html.includes(`<meta ${attribute} content="${description}"`));
 }
@@ -58,3 +58,13 @@ for (const attribute of ['property="og:title"', 'name="twitter:title"']) {
   assert.ok(html.includes(`<meta ${attribute} content="Colorado Badged Network"`));
 }
 console.log('Approved social titles and descriptions match.');
+assert.match(html, /<h1 id="hero-title">CBN<\/h1>/);
+assert.match(html, /<strong>Colorado Badged Network<\/strong> is a cannabis industry organization and the central hub/);
+assert.match(html, /src="assets\/cbn-logo-source\.png"/);
+assert.doesNotMatch(html, /googleusercontent\.com/);
+assert.doesNotMatch(html, /class="footer-name"/);
+assert.match(html, /Read Rooster article/);
+assert.match(html, /Read Wikipedia/);
+console.log('Header, hero, footer, local image and distinct link checks passed.');
+
+assert.doesNotMatch(visible, /marijuana/i);
