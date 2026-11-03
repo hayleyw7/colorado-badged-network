@@ -18,3 +18,5 @@ body{background:var(--cream);color:#222}.site-header{background:#000;border-bott
 .feature a,.text-link,.podcast a{color:#356b1c}
 .footer-inner .brand-mark{border-color:#356b1c;color:#356b1c}
 .hero-copy .button.primary,.media .button.secondary{background:#6fae38;color:#111}
+section#about,section#resources,section#media{scroll-margin-top:96px}
+@media(max-width:760px){section#about,section#resources,section#media{scroll-margin-top:78px}}
