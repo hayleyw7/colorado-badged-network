@@ -23,3 +23,5 @@ section#about,section#resources,section#media{scroll-margin-top:96px}
 /* Keep media cards equal-height per row and align their links. */
 .media-grid{align-items:stretch}.media-grid .feature{height:100%;display:flex;flex-direction:column}.media-grid .feature a{margin-top:auto}
 .brand-mark{overflow:hidden;position:relative;background:#000}.brand-mark img{position:absolute;left:50%;top:-8%;width:300%;max-width:none;height:auto;transform:translateX(-50%)}
+:root{--ink:#000000;--cream:#FFFFFF;--mint:#959699;--green:#48A208;--orange:#79C646;--line:#959699}
+body{background:#FFFFFF;color:#000000}.hero-copy h1,.section-label,.feature-kicker,.feature a,.text-link{color:#48A208}.lede,.media-intro p,.feature p{color:#585858}.primary,.nav-cta{background:#79C646;color:#000000}.site-header,.resource-section{background:#000000}.resource-callout p{color:#959699}.footer-inner .brand-mark{border-color:#48A208;color:#48A208;background:#959699}footer{background:#959699}
