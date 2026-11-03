@@ -12,3 +12,9 @@ body{background:var(--cream);color:#222}.site-header{background:#000;border-bott
 @media(max-width:760px){.media-intro{margin:25px 0 30px}.media-grid{gap:18px}.feature{min-height:245px}}
 @media(min-width:761px){.compact-resource{padding:54px 0}.resource-callout{display:flex;justify-content:space-between;align-items:center;gap:40px}.resource-callout h2{margin:0 0 8px;font-size:32px}.resource-callout p{margin:0;color:#c4d2c6}.three-up{grid-template-columns:repeat(3,1fr)}.three-up .feature{min-height:310px}.three-up .feature h3{font-size:24px}}
 @media(max-width:760px){.compact-resource{padding:50px 0}.resource-callout h2{font-size:30px;margin-bottom:8px}.resource-callout .button{margin-top:22px}.three-up{grid-template-columns:1fr}}
+/* Contrast-safe CBN green variants: preserves the brand hue while meeting WCAG AA on light surfaces. */
+:root{--green:#356b1c;--orange:#356b1c}
+.hero h1,.eyebrow,.section-label,.feature-kicker{color:#356b1c}
+.feature a,.text-link,.podcast a{color:#356b1c}
+.footer-inner .brand-mark{border-color:#356b1c;color:#356b1c}
+.hero-copy .button.primary,.media .button.secondary{background:#6fae38;color:#111}
