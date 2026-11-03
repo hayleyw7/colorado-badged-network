@@ -66,3 +66,5 @@ assert.doesNotMatch(html, /class="footer-name"/);
 assert.match(html, /Read Rooster article/);
 assert.match(html, /Read Wikipedia/);
 console.log('Header, hero, footer, local image and distinct link checks passed.');
+
+assert.doesNotMatch(visible, /marijuana/i);
