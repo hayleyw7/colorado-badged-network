@@ -50,7 +50,7 @@ assert.match(html, /property="og:image:width" content="1200"/);
 assert.match(html, /property="og:image:height" content="630"/);
 console.log('Social preview image and canonical metadata checks passed.');
 
-const description = 'Founded in 2015, Colorado Badged Network is the central hub for networking, hiring, compliance, events, &amp; more.';
+const description = 'Founded in 2015, Colorado Badged Network is the central hub for cannabis industry networking, hiring, compliance, events, &amp; more.';
 for (const attribute of ['name="description"', 'property="og:description"', 'name="twitter:description"']) {
   assert.ok(html.includes(`<meta ${attribute} content="${description}"`));
 }
