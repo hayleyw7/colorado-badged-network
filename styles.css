@@ -5,3 +5,6 @@
 .hero-copy h1{color:var(--black)}.text-link,.text-link span,.feature a{color:var(--dark-gray)}.section-label,.feature-kicker{color:var(--dark-gray)}
 /* Use the exact repository PNG for the circle mark and clip its black exterior. */
 .brand-mark img{content:url('https://raw.githubusercontent.com/hayleyw7/colorado-badged-network/main/assets/cbn-logo-source.png');left:50%;top:50%;width:48px;max-width:none;height:auto;transform:translate(-50%,-50%);mix-blend-mode:screen}
+.resource-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:24px}.resource-card{border:1px solid var(--dark-gray);padding:24px;display:flex;flex-direction:column;align-items:flex-start}.resource-card h2{margin:0 0 8px;font-size:24px;color:var(--white)}.resource-card p{margin:0 0 20px;color:var(--light-gray);max-width:42ch}.resource-card .button{margin-top:auto}
+@media(max-width:760px){.resource-grid{grid-template-columns:1fr}}
+.social{color:var(--white)}footer{background:var(--black)}.footer-name{color:var(--white);font-weight:700}.social a:hover{color:var(--light-green)}
